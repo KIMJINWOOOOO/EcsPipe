@@ -1,9 +1,10 @@
 version: 0.2
 
 env:
-  AWS_ECR: 176381617529.dkr.ecr.ap-northeast-2.amazonaws.com
-  IMAGE_REPO_NAME: ecspipe-image
-  CONTAINER_NAME: ecspipe-container
+  variables:
+    AWS_ECR: 176381617529.dkr.ecr.ap-northeast-2.amazonaws.com
+    IMAGE_REPO_NAME: ecspipe-image
+    CONTAINER_NAME: ecspipe-container
   
 phases:
 
@@ -25,3 +26,4 @@ phases:
 artifacts: 
   files: # 빌드후에 배포단계로 옮길 파일들.
     - imagedefinitions.json #push된 이미지로 부터 컨테이너를 배포하기 위함.
+
